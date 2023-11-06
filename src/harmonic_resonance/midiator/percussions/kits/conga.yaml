@@ -1,0 +1,27 @@
+#these are all a two measure pattern
+tumbao:
+  # 5 heel 4 toe
+  mute:  '54_454__54___4__'
+  conga: '__7___55__7___55'
+  tumba: '___________55___'
+  # 7 slap - 5 open
+guaguanco:
+  # 5 heel 4 toe 3 touch
+  mute:  '___5_3_______3__'
+  conga: '_77____55-75___5'
+  tumba: '______7_______8_'
+  # 7 slap - 5 open
+  #
+bolero:
+  # 5 heel 4 toe 3 touch
+  mute:  '54_454__54_45___'
+  conga: '__7___55__7___5_'
+  tumba: '_____________5_5'
+  # 7 slap - 5 open
+  #
+samba:
+  # 5 heel 4 toe
+  mute:  '_3____3___3__33_'
+  conga: '5_77_5_557_7___5'
+  tumba: '____5_______5___'
+  # 7 slap - 5 open
