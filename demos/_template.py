@@ -17,7 +17,7 @@ part = pm.Part(PROJECT, title, bpm=bpm, root=root, key=key)
 M = bpM * part.ticks_per_beat  # ticks per Measure
 
 chords = pm.progressions.ii_V_i_i(root)
-chords = pm.progressions.i_vi_ii_V(root)
+#  chords = pm.progressions.i_vi_ii_V(root)
 
 piano = part.add_piano()
 vibes = part.add_vibes()
@@ -29,7 +29,6 @@ choir = part.add_choir_swell()
 conga = pm.Conga(part)
 standard = pm.Standard(part)
 
-
 for loop in range(4):
     part.set_marker(f"{loop}", 0)
     for chord_num, (chord_name, chord) in enumerate(chords):
@@ -39,20 +38,11 @@ for loop in range(4):
 
         part.set_marker(f"{chord_name} - {chord}", 0)
 
-        if chord_num in [0, 2]:
-            rhythm = pm.patterns.latin.bossa_nova
-        if chord_num in [1, 3]:
-            rhythm = pm.patterns.latin.rhumba
-
-        rhythm = pm.patterns.funky.billie_jean
-
         measures = 4
         for m in range(measures):
             part.set_marker(f"{m + 1}", M)
             if m == 3:
                 #  velocity_mod = 10
-                
-
                 patterns = standard.patterns["funky_drummer"]
                 standard.set_patterns(patterns, M, velocity_mod=-10)
             else:
@@ -60,6 +50,8 @@ for loop in range(4):
                 patterns = standard.patterns["billie_jean"]
                 standard.set_patterns(patterns, M, velocity_mod=-10)
 
+            #  patterns = standard.patterns["swing"]
+            #  standard.set_patterns(patterns, M, velocity_mod=-10)
 
             if chord_num == 3:
                 if m == measures - 1:

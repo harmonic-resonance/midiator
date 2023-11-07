@@ -1,6 +1,7 @@
 import yaml
 from pathlib import Path
 
+
 class Kit:
     """
     A base class for a drum kit, defining common functionalities for percussion
@@ -47,12 +48,17 @@ class Kit:
         :param velocity_mod: A modifier to the default velocity (intensity) of
             each note in the pattern, allowing for dynamic variations.
         """
-        b = int(
-            duration / 16
-        )  # Convert duration to number of beats based on 16th note segmentation.
-        for perc, pattern in pattern_set.items():
-            self.kit[perc].add_pattern(pattern, b, velocity_mod=velocity_mod)
-
+        #  for perc, pattern in pattern_set.items():
+            #  b = int(duration / len(pattern))
+            #  self.kit[perc].add_pattern(pattern, b, velocity_mod=velocity_mod)
+        for perc_name, perc in self.kit.items():
+            if perc_name in pattern_set:
+                pattern = pattern_set[perc_name]
+                b = int(duration / len(pattern))
+                perc.add_pattern(pattern, b, velocity_mod=velocity_mod)
+            else:
+                perc.set_rest(duration)
+                
 
     def load_patterns(self, yaml_file_name: str):
         """

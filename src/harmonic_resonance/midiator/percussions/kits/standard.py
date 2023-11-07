@@ -11,6 +11,7 @@ class Standard(Kit):
         self.snare = Percussion(part, P.acoustic_snare)
         self.closed_hh = Percussion(part, P.closed_hi_hat)
         self.open_hh = Percussion(part, P.open_hi_hat)
+        self.ride = Percussion(part, P.ride_cymbal_1)
 
         self.load_patterns('standard.yaml')
 
@@ -19,6 +20,7 @@ class Standard(Kit):
             "snare": self.snare,
             "closed_hh": self.closed_hh,
             "open_hh": self.open_hh,
+            "ride": self.ride,
         }
 
 

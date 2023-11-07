@@ -10,3 +10,8 @@ funky_drummer:
   closed_hh:  "3232323_32323_32"
   open_hh:    "_______5_____5__"
 
+swing:
+  kick:       "7__5__5__5__"
+  # closed_hh:  "_4_4_4"
+  ride:       "3____43__4_3"
+
