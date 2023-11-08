@@ -1,8 +1,19 @@
 billie_jean:
-  kick:       "7_______7_______"
-  snare:      "____7_______7___"
-  closed_hh:  "3_3_3_3_3_3_3_3_"
-  open_hh:    "________________"
+  kick:       "7-__7-__"
+  snare:      "__7-__7-"
+  closed_hh:  "42324232"
+
+# billie_jean_variation:
+  # kick:       "7-_-7-_7"
+  # snare:      "_-7-_-77"
+  # closed_hh:  "24234244"
+
+# billie_jean_fill:
+  # kick:       "7-_____7"
+  # snare:      "__7_7_77"
+  # closed_hh:  "________"
+  # open_hh:    "______5_"
+
 
 funky_drummer:
   kick:       "7_5___7___5__7__"
@@ -14,4 +25,36 @@ swing:
   kick:       "7__5__5__5__"
   # closed_hh:  "_4_4_4"
   ride:       "3____43__4_3"
+
+rock_solid:
+  kick:       "7___7___7___7___"
+  snare:      "____7___7___7___"
+  closed_hh:  "4224224224224224"
+
+latin_groove:
+  kick:       "7___7_____7___7_"
+  snare:      "__7___7____7__7_"
+  closed_hh:  "2222322222223222"
+  open_hh:    "________5_______"
+  cowbell:    "2_2_2___2_2_2___"
+
+half_time_shuffle:
+  kick:       "7_______7_______"
+  snare:      "____7_______7___"
+  closed_hh:  "4_2_4_2_4_2_4_2_"
+  open_hh:    "___________5____"
+
+bossa_nova:
+  kick:       "7___5___7___5___"
+  snare:      "__7___7____7___7"
+  closed_hh:  "2222422222224222"
+  open_hh:    "___________5____"
+  ride:       "________________"
+  cowbell:    "2___2_2___2___2_"
+
+classic_funk:
+  kick:       "7_5_7___5_7_5___"
+  snare:      "____7_______7___"
+  closed_hh:  "232_232_232_232_"
+  open_hh:    "_______5_______5"
 
