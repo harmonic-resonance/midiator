@@ -1,5 +1,5 @@
 """
-phimidi template
+orchestration template
 """
 import harmonic_resonance.midiator as pm
 import itertools as itertools
@@ -14,7 +14,7 @@ root = pm.N.D3  # the root note of the key
 key = "D"
 
 part = pm.Part(PROJECT, title, bpm=bpm, root=root, key=key)
-M = bpM * part.ticks_per_beat  # ticks per Measure
+M = part.measure_ticks()
 
 chords = pm.progressions.ii_V_i_i(root)
 #  chords = pm.progressions.i_vi_ii_V(root)
@@ -23,6 +23,8 @@ piano = part.add_piano()
 vibes = part.add_vibes()
 bass = part.add_bass()
 strings = part.add_strings()
+
+horns = part.add_horns()
 
 choir = part.add_choir_swell()
 
@@ -83,6 +85,19 @@ for loop in range(4):
         else:
             conga.rest_all(4 * M)
 
+
+        if loop >= 0:
+            #  horns.set_rest(3 * M)
+            for _ in range(4):
+                b = M / 8
+                horns.set_note(chord[-1] - 12, 1 * b, velocity=90)
+                #  horns.set_note(chord[0], 3 * b, velocity=30)
+                horns.set_rest(3 * b)
+                horns.set_note(chord[-2] - 12, 1 * b, velocity=70)
+                #  horns.set_note(chord[1], 3 * b, velocity=50)
+                horns.set_rest(3 * b)
+        else:
+            horns.set_rest(4 * M)
 
         if loop > 2:
             strings.set_rest(3 * M)
