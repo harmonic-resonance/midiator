@@ -1,10 +1,10 @@
 from ablog.conf import *
 
-org = ""
-org_name = ""
+org = "harmonic-resonance"
+org_name = "HARMONIC resonance"
 
-repo = ""
-repo_name = ""
+repo = "midiator"
+repo_name = "midiator"
 
 blog_title = f'{org_name} • {repo_name}'
 html_title = f'{org_name} • {repo_name}'
@@ -25,21 +25,6 @@ blog_authors = {
     "phi": ("phi ARCHITECT", None),
 }
 
-extensions.append('sphinx_rtd_theme')
-
-html_theme = 'sphinx_rtd_theme'
-
-html_css_files = [ "css/rtd-dark.css" ]
-
-html_theme_options = {
-    #  'logo': 'logo.png',
-    #  'logo_name': True,
-    #  'github_user': org,
-    #  'github_repo': repo,
-    #  'github_button': True,
-    'navigation_depth': -1,
-    'prev_next_buttons_location': 'both',
-}
 html_context = {
     "display_github": True, # Integrate GitHub
     "github_user": org, # Username
