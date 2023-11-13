@@ -3,6 +3,7 @@ modules
 =======
 
 .. toctree::
+   :maxdepth: 1
 
    harmonic_resonance.midiator
    harmonic_resonance.midiator.part
