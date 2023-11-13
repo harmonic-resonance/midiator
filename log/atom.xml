@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-  <id>https://.github.io/</id>
-  <title> • </title>
-  <updated>2023-11-08T00:50:47.566032+00:00</updated>
-  <link href="https://.github.io/"/>
-  <link href="https://.github.io/log/atom.xml" rel="self"/>
+  <id>https://harmonic-resonance.github.io/midiator</id>
+  <title>HARMONIC resonance • midiator</title>
+  <updated>2023-11-13T01:31:49.929000+00:00</updated>
+  <link href="https://harmonic-resonance.github.io/midiator"/>
+  <link href="https://harmonic-resonance.github.io/midiator/log/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="unknown.dev">ABlog</generator>
 </feed>
