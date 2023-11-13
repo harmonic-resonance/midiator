@@ -1,10 +1,16 @@
 
-harmonic_resonance.midiator
-===========================
+modules
+=======
 
-.. automodule:: harmonic_resonance.midiator
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. toctree::
 
+   harmonic_resonance.midiator
+   harmonic_resonance.midiator.part
+   harmonic_resonance.midiator.notes
+   harmonic_resonance.midiator.scales
+   harmonic_resonance.midiator.chords
+   harmonic_resonance.midiator.instruments
+   harmonic_resonance.midiator.percussions
+   harmonic_resonance.midiator.voices
+   harmonic_resonance.midiator.arps
 
