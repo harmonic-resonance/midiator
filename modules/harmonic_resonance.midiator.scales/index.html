@@ -84,7 +84,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../harmonic_resonance.midiator/">harmonic_resonance.midiator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../harmonic_resonance.midiator.part/">harmonic_resonance.midiator.part</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../harmonic_resonance.midiator.notes/">harmonic_resonance.midiator.notes</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">harmonic_resonance.midiator.scales</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">harmonic_resonance.midiator.scales</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#harmonic_resonance.midiator.scales.build_scale"><code class="docutils literal notranslate"><span class="pre">build_scale()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#harmonic_resonance.midiator.scales.Scale"><code class="docutils literal notranslate"><span class="pre">Scale</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#harmonic_resonance.midiator.scales.Key"><code class="docutils literal notranslate"><span class="pre">Key</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#harmonic_resonance.midiator.scales.Key.position"><code class="docutils literal notranslate"><span class="pre">Key.position()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../harmonic_resonance.midiator.chords/">harmonic_resonance.midiator.chords</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../harmonic_resonance.midiator.instruments/">harmonic_resonance.midiator.instruments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../harmonic_resonance.midiator.percussions/">harmonic_resonance.midiator.percussions</a></li>
@@ -125,8 +133,33 @@
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <section id="harmonic-resonance-midiator-scales">
-<h1>harmonic_resonance.midiator.scales<a class="headerlink" href="#harmonic-resonance-midiator-scales" title="Link to this heading"></a></h1>
+              <section id="module-harmonic_resonance.midiator.scales">
+<span id="harmonic-resonance-midiator-scales"></span><h1>harmonic_resonance.midiator.scales<a class="headerlink" href="#module-harmonic_resonance.midiator.scales" title="Link to this heading"></a></h1>
+<p>utils for building scales</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="harmonic_resonance.midiator.scales.build_scale">
+<span class="sig-prename descclassname"><span class="pre">harmonic_resonance.midiator.scales.</span></span><span class="sig-name descname"><span class="pre">build_scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">48</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'major'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">octaves</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/harmonic_resonance/midiator/scales/#build_scale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#harmonic_resonance.midiator.scales.build_scale" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="harmonic_resonance.midiator.scales.Scale">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">harmonic_resonance.midiator.scales.</span></span><span class="sig-name descname"><span class="pre">Scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">octaves</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/harmonic_resonance/midiator/scales/#Scale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#harmonic_resonance.midiator.scales.Scale" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="harmonic_resonance.midiator.scales.Key">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">harmonic_resonance.midiator.scales.</span></span><span class="sig-name descname"><span class="pre">Key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.9/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/harmonic_resonance/midiator/scales/#Key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#harmonic_resonance.midiator.scales.Key" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.9/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>generate classic key offsets for a root note</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="harmonic_resonance.midiator.scales.Key.position">
+<span class="sig-name descname"><span class="pre">position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.9/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/harmonic_resonance/midiator/scales/#Key.position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#harmonic_resonance.midiator.scales.Key.position" title="Link to this definition"></a></dt>
+<dd><p>numeric position</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 <div class="section">

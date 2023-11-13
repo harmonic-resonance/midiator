@@ -81,7 +81,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../mission/">mission</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage/">usage</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">modules</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">harmonic_resonance.midiator</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">harmonic_resonance.midiator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#midiator">midiator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#harmonic-resonance">HARMONIC resonance</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#harmonic_resonance.midiator.new_midi"><code class="docutils literal notranslate"><span class="pre">new_midi()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#harmonic_resonance.midiator.set_new_track"><code class="docutils literal notranslate"><span class="pre">set_new_track()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#harmonic_resonance.midiator.save_midi"><code class="docutils literal notranslate"><span class="pre">save_midi()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#harmonic_resonance.midiator.play"><code class="docutils literal notranslate"><span class="pre">play()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../harmonic_resonance.midiator.part/">harmonic_resonance.midiator.part</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../harmonic_resonance.midiator.notes/">harmonic_resonance.midiator.notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../harmonic_resonance.midiator.scales/">harmonic_resonance.midiator.scales</a></li>
@@ -125,8 +135,44 @@
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <section id="harmonic-resonance-midiator">
-<h1>harmonic_resonance.midiator<a class="headerlink" href="#harmonic-resonance-midiator" title="Link to this heading"></a></h1>
+              <section id="module-harmonic_resonance.midiator">
+<span id="harmonic-resonance-midiator"></span><h1>harmonic_resonance.midiator<a class="headerlink" href="#module-harmonic_resonance.midiator" title="Link to this heading"></a></h1>
+<section id="midiator">
+<h2>midiator<a class="headerlink" href="#midiator" title="Link to this heading"></a></h2>
+<section id="harmonic-resonance">
+<h3>HARMONIC resonance<a class="headerlink" href="#harmonic-resonance" title="Link to this heading"></a></h3>
+</section>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="harmonic_resonance.midiator.new_midi">
+<span class="sig-prename descclassname"><span class="pre">harmonic_resonance.midiator.</span></span><span class="sig-name descname"><span class="pre">new_midi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tempo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MidiFile</span></span></span><a class="reference internal" href="../../_modules/harmonic_resonance/midiator/#new_midi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#harmonic_resonance.midiator.new_midi" title="Link to this definition"></a></dt>
+<dd><p>sets up a mido midi file with initial meta track</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="harmonic_resonance.midiator.set_new_track">
+<span class="sig-prename descclassname"><span class="pre">harmonic_resonance.midiator.</span></span><span class="sig-name descname"><span class="pre">set_new_track</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instrument</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/harmonic_resonance/midiator/#set_new_track"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#harmonic_resonance.midiator.set_new_track" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="harmonic_resonance.midiator.save_midi">
+<span class="sig-prename descclassname"><span class="pre">harmonic_resonance.midiator.</span></span><span class="sig-name descname"><span class="pre">save_midi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/harmonic_resonance/midiator/#save_midi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#harmonic_resonance.midiator.save_midi" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="harmonic_resonance.midiator.play">
+<span class="sig-prename descclassname"><span class="pre">harmonic_resonance.midiator.</span></span><span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/harmonic_resonance/midiator/#play"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#harmonic_resonance.midiator.play" title="Link to this definition"></a></dt>
+<dd><p>TODO: Docstring for play.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Filepath<span class="colon">:</span></dt>
+<dd class="field-odd"><p>TODO</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>TODO</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
 <div class="section">
