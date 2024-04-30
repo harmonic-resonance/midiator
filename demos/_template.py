@@ -8,10 +8,10 @@ from rich import print as log
 
 PROJECT = "demos"
 title = "template"
-bpm = 120  # beats per minute
+bpm = 180  # beats per minute
 bpM = 4  # beats per Measure
-root = pm.N.D3  # the root note of the key
-key = "D"
+root = pm.N.E3  # the root note of the key
+key = "E"
 
 part = pm.Part(PROJECT, title, bpm=bpm, root=root, key=key)
 M = part.measure_ticks()

@@ -2,7 +2,7 @@
 script for generating accompaniment for Thelio videos
 :bpm: based on the observed timing of the suspend light
 """
-import phimidi as pm
+import harmonic_resonance.midiator as pm
 import itertools as itertools
 import random as random
 from rich import print as log

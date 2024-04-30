@@ -15,6 +15,10 @@ billie_jean:
   # open_hh:    "______5_"
 
 
+four:
+  kick:       "7--_"
+  closed_hh:  "7777"
+  
 funky_drummer:
   kick:       "7_5___7___5__7__"
   snare:      "____7__5_5_57__7"

@@ -1,7 +1,7 @@
 """
 test percusion patterns
 """
-import phimidi as pm
+import harmonic_resonance.midiator as pm
 from rich import print as log
 
 
@@ -25,21 +25,24 @@ clave.set_hits(M, 4)
 conga.rest_all(M)
 shaker.set_rest(M)
 
-rhythms = [
-        conga.tumbao,
-        conga.guaguanco,
-        conga.bolero,
-        conga.samba,
-        ]
+#  rhythms = [
+        #  conga.tumbao,
+        #  conga.guaguanco,
+        #  conga.bolero,
+        #  conga.samba,
+        #  ]
 
-for rhythm in rhythms:
-    part.set_marker(str(rhythm.__name__), 8*M)
+#  patterns = conga.patterns["tumbao"]
+
+#  for rhythm in rhythms:
+for key, pattern in conga.patterns.items():
+    part.set_marker(key, duration=8*M)
 
     for i in range(4):
         if i % 2:
-            rhythm(2 * M, velocity_mod=-10)
+            conga.set_patterns(pattern, 2 * M, velocity_mod=10)
         else:
-            rhythm(2 * M)
+            conga.set_patterns(pattern, 2 * M, velocity_mod=10)
 
         pm.patterns.latin.son_clave2(2 * M, clave)
         for _ in range(4):

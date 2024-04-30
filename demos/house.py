@@ -1,4 +1,4 @@
-import phimidi as pm
+import harmonic_resonance.midiator as pm
 import math as math
 import subprocess as subprocess
 import numpy as np
