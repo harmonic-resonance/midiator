@@ -1,0 +1,154 @@
+/home/phiarchitect/PROJECTS/harmonic-resonance/midiator
+├── demos
+│   ├── arps2.py
+│   ├── arps.py
+│   ├── band2.py
+│   ├── band3.py
+│   ├── band.py
+│   ├── comp1.py
+│   ├── comp_3.py
+│   ├── demo.py
+│   ├── demos-template-D-120.mid
+│   ├── demos-template-D-180.mid
+│   ├── demos-template-E-180.mid
+│   ├── drums.py
+│   ├── enum2.py
+│   ├── enum_test.py
+│   ├── fib.mp3
+│   ├── fibonacci-01-E-120.mid
+│   ├── fibonacci-01-E-120.ogg
+│   ├── fibonacci-01-major-E-120.mid
+│   ├── fibonacci-01-major-E-120.ogg
+│   ├── fibonacci-music_for_fib-E-120.mid
+│   ├── fibonacci-music_for_fib-E-120.ogg
+│   ├── fibonacci-music_for_fib-G-120.mid
+│   ├── fibonacci-music_for_fib-G-240.mid
+│   ├── fibonacci-music_for_fib-G-240.ogg
+│   ├── fibonacci.py
+│   ├── fibs.py
+│   ├── house.py
+│   ├── ii_V_I.py
+│   ├── latin.py
+│   ├── loves-in-need.py
+│   ├── mandala.py
+│   ├── mandala-unfold from the center-E-50.mid
+│   ├── mandala-unfold from the center-E-50.ogg
+│   ├── mandala-unfold from the center-E-52.mid
+│   ├── mandala-unfold from the center-E-52.ogg
+│   ├── mandala-unfold from the center-E-53.mid
+│   ├── mandala-unfold from the center-E-53.ogg
+│   ├── mandala-unfold from the center-E-90.mid
+│   ├── outpost.py
+│   ├── primes.py
+│   ├── README.md
+│   ├── rtmidi.ipynb
+│   ├── setup.py
+│   ├── sf2utils.ipynb
+│   ├── spirals.py
+│   ├── tags
+│   ├── _template.py
+│   ├── temp.py
+│   ├── test_chords.py
+│   ├── test_patterns-conga-D-180.mid
+│   ├── test_patterns.py
+│   ├── thelio-button_blink-D-88.mid
+│   ├── thelio-button_blink-D-88.ogg
+│   ├── thelio-button_dark-D-88.mid
+│   ├── thelio-button_dark-D-88.ogg
+│   ├── thelio_button.py
+│   ├── thelio-corner-D-88.mid
+│   ├── thelio-corner-D-88.ogg
+│   ├── thelio.py
+│   ├── thelio-tower-D-88.mid
+│   ├── thelio-tower-D-88.ogg
+│   ├── voices2.py
+│   ├── voices.ipynb
+│   ├── voices.py
+│   └── workshop.py
+├── docsrc
+│   ├── conf.py
+│   ├── demos
+│   │   ├── demo.rst
+│   │   └── index.rst
+│   ├── index.rst
+│   ├── intro.rst
+│   ├── mission
+│   │   └── index.rst
+│   ├── modules
+│   │   ├── harmonic_resonance.midiator.arps.rst
+│   │   ├── harmonic_resonance.midiator.chords.rst
+│   │   ├── harmonic_resonance.midiator.instruments.rst
+│   │   ├── harmonic_resonance.midiator.notes.rst
+│   │   ├── harmonic_resonance.midiator.part.rst
+│   │   ├── harmonic_resonance.midiator.percussions.rst
+│   │   ├── harmonic_resonance.midiator.rst
+│   │   ├── harmonic_resonance.midiator.scales.rst
+│   │   ├── harmonic_resonance.midiator.voices.rst
+│   │   └── index.rst
+│   ├── __pycache__
+│   ├── refs
+│   │   └── index.rst
+│   ├── _static
+│   │   └── css
+│   │       ├── custom.css
+│   │       └── rtd-dark.css
+│   ├── todos.rst
+│   └── usage
+│       └── index.rst
+├── LICENSE
+├── pyproject.toml
+├── README.rst
+└── src
+    └── harmonic_resonance
+        └── midiator
+            ├── app.py
+            ├── arps
+            │   ├── __init__.py
+            │   └── __pycache__
+            ├── chords
+            │   ├── chord_types.py
+            │   ├── __init__.py
+            │   ├── progressions.py
+            │   └── __pycache__
+            ├── __init__.py
+            ├── instruments
+            │   ├── __init__.py
+            │   ├── instrument.py
+            │   ├── instrument_types.py
+            │   └── __pycache__
+            ├── __main__.py
+            ├── midiator.py
+            ├── notes.py
+            ├── part.py
+            ├── percussions
+            │   ├── __init__.py
+            │   ├── kits
+            │   │   ├── conga.py
+            │   │   ├── conga.yaml
+            │   │   ├── __init__.py
+            │   │   ├── kit.py
+            │   │   ├── __pycache__
+            │   │   ├── standard.py
+            │   │   └── standard.yaml
+            │   ├── patterns
+            │   │   ├── funky.py
+            │   │   ├── __init__.py
+            │   │   ├── latin.py
+            │   │   ├── __pycache__
+            │   │   ├── swing.py
+            │   │   └── techno.py
+            │   ├── percussion.py
+            │   ├── percussion_types.py
+            │   └── __pycache__
+            ├── __pycache__
+            ├── scales
+            │   ├── __init__.py
+            │   ├── __pycache__
+            │   └── scale_types.py
+            └── voices
+                ├── __init__.py
+                ├── __pycache__
+                ├── voice.py
+                └── voice_types.py
+
+30 directories, 121 files
