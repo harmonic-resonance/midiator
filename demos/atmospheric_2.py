@@ -21,7 +21,7 @@ b = part.ticks_per_beat # Ticks per beat
 
 # Define key notes for melody generation (e.g., C3 to C6)
 key_notes_scale = Scale(root - 12, key_scale_type, octaves=3) # C3 to C5 range
-key_notes = list(key_notes_scale.notes.values())
+key_notes = list(key_notes_scale.values()) # Access values directly from the dict
 
 # 2. Musical Foundation - Simple Major Chord Progression (I - IV - V - I)
 chords_notes = [
