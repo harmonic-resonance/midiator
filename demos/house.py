@@ -38,11 +38,12 @@ strings = pm.make_strings(mf, 4)
 
 kick = pm.make_kick(mf)
 snare = pm.make_snare(mf)
-ride = pm.make_ride(mf)
-hihat_closed = pm.make_hihat_closed(mf)
+ride = pm.make_ride(mf) # Uses default channel 9
+hihat_closed = pm.make_hihat_closed(mf) # Uses default channel 9
 
-choir = pm.make_choir_swell(mf)
-solo = pm.make_solo_aah(mf)
+# Assign specific channels for voices
+choir = pm.make_choir_swell(mf, 5)
+solo = pm.make_solo_aah(mf, 6)
 #  choir = strings
 
 steps = np.arange(32, 96, 4)
