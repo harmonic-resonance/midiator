@@ -70,40 +70,25 @@ for loop in range(total_loops):
         pad_halo.ramp_volume_up(chord_duration - M/2, lo=0, hi=50)
         pad_halo.set_notes(pad_halo_chord, chord_duration - M/2, velocity=65)
 
-        # --- Dynamic Vibraphone Melody ---
-        # Pattern over 4 measures: R - 5 - | 3 - 7 - | Rest | Rest |
-        # Notes played in higher octave
-        try:
-            root_note = chord[0] + 12
-            third_note = chord[1] + 12 # Assuming chord notes are [R, 3, 5, 7]
-            fifth_note = chord[2] + 12
-            # Use root again if chord doesn't have a 7th (e.g., triads)
-            seventh_note = chord[3] + 12 if len(chord) > 3 else root_note
-        except IndexError:
-            log.warning(f"Chord {chord_name} ({chord}) too short for melody pattern, using root.")
-            root_note = chord[0] + 12
-            third_note = root_note
-            fifth_note = root_note
-            seventh_note = root_note
+        # --- Fluid Vibraphone Melody ---
+        # Play chord tones (R, 3, 5, 7) as quarter notes over the measures
+        chord_melody_notes = [n + 12 for n in chord] # Use octave above
+        root_melody = chord_melody_notes[0] # Default to root
 
-
-        note_duration = b # Play for one beat
-        rest_duration = b # Rest for one beat
-
-        # Measure 1
-        vibes.set_note(root_note, note_duration, velocity=65)
-        vibes.set_rest(rest_duration)
-        vibes.set_note(fifth_note, note_duration, velocity=60)
-        vibes.set_rest(rest_duration)
-
-        # Measure 2
-        vibes.set_note(third_note, note_duration, velocity=62)
-        vibes.set_rest(rest_duration)
-        vibes.set_note(seventh_note, note_duration, velocity=58)
-        vibes.set_rest(rest_duration)
-
-        # Measure 3 & 4
-        vibes.set_rest(2 * M)
+        for measure in range(measures_per_chord):
+            for beat_num in range(bpM):
+                note_to_play = root_melody # Default note
+                if beat_num == 0:
+                    note_to_play = chord_melody_notes[0]
+                elif beat_num == 1 and len(chord_melody_notes) > 1:
+                    note_to_play = chord_melody_notes[1]
+                elif beat_num == 2 and len(chord_melody_notes) > 2:
+                    note_to_play = chord_melody_notes[2]
+                elif beat_num == 3 and len(chord_melody_notes) > 3:
+                    note_to_play = chord_melody_notes[3]
+                # Add slight velocity variation
+                velocity = random.randint(60, 75)
+                vibes.set_note(note_to_play, b, velocity=velocity)
 
         current_time += chord_duration
 
