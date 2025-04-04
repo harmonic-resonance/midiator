@@ -108,8 +108,8 @@ fx_atmosphere.ramp_volume_down(fade_duration, lo=0)
 reverse_cymbal.set_rest(fade_duration)
 # tinkle.set_rest(fade_duration)
 
-# Add final silence
-part.set_rest(fade_duration)
+# Final silence is achieved by instruments ending or fading out.
+# No explicit part.set_rest() is needed.
 
 
 # 5. Final Output
