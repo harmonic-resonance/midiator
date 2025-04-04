@@ -77,7 +77,12 @@ for i in range(total_duration_measures // measures_per_chord):
 
     # --- Sparse Percussion ---
     # Add a reverse cymbal hit at the start of each chord change
-    reverse_cymbal.set_note(pm.P.reverse_cymbal, M, velocity=60) # Use note for pitched percussion
+    # Note: Reverse Cymbal is an Instrument Type (pm.I), not Percussion (pm.P)
+    # We use set_note on the instrument instance 'reverse_cymbal' we created earlier.
+    # The first argument to set_note should be the MIDI note number for the sound.
+    # For GM sounds like Reverse Cymbal (119), the note number often doesn't matter
+    # as much as the program change, but we still need to provide one. Let's use C5 (72).
+    reverse_cymbal.set_note(pm.N.C5, M, velocity=60) # Use a standard note like C5
     reverse_cymbal.set_rest(chord_duration - M) # Rest until next chord
 
     # Optional: Add a random tinkle bell note occasionally
