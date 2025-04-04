@@ -37,6 +37,13 @@ class Percussion(Instrument):
             )
         )
 
+        # Add tracks for volume and pan control, similar to Instrument
+        self.track_volume = midi_file.add_track(name=f'{self.name}-volume')
+        self.track_pan = midi_file.add_track(name=f'{self.name}-pan')
+        #  self.track_reverb = pm.set_new_track(mf, name=f'{self.name}-reverb') # Consider adding if needed later
+        #  self.track_chorus = pm.set_new_track(mf, name=f'{self.name}-chorus') # Consider adding if needed later
+
+
     def set_hit(self, duration, velocity=64):
         """Sets a single percussion hit.
 
