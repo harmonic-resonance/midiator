@@ -109,48 +109,49 @@
            <div itemprop="articleBody">
               <h1>Source code for harmonic_resonance.midiator.voices</h1><div class="highlight"><pre>
 <span></span><span class="kn">from</span><span class="w"> </span><span class="nn">.voice</span><span class="w"> </span><span class="kn">import</span> <span class="n">Voice</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.voice</span><span class="w"> </span><span class="kn">import</span> <span class="n">Voice</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">voice_types</span> <span class="k">as</span> <span class="n">V</span>
 
 <div class="viewcode-block" id="make_solo_ooh">
 <a class="viewcode-back" href="../../../../modules/harmonic_resonance.midiator.voices/#harmonic_resonance.midiator.voices.make_solo_ooh">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">make_solo_ooh</span><span class="p">(</span><span class="n">mf</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">solo_ooh</span><span class="p">)</span></div>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_solo_ooh</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">solo_ooh</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">channel</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="make_solo_aah">
 <a class="viewcode-back" href="../../../../modules/harmonic_resonance.midiator.voices/#harmonic_resonance.midiator.voices.make_solo_aah">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">make_solo_aah</span><span class="p">(</span><span class="n">mf</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">solo_aah</span><span class="p">)</span></div>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_solo_aah</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">solo_aah</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">channel</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="make_choir_aah">
 <a class="viewcode-back" href="../../../../modules/harmonic_resonance.midiator.voices/#harmonic_resonance.midiator.voices.make_choir_aah">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">make_choir_aah</span><span class="p">(</span><span class="n">mf</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">choir_aah</span><span class="p">)</span></div>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_choir_aah</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">choir_aah</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">channel</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="make_choir_ooh">
 <a class="viewcode-back" href="../../../../modules/harmonic_resonance.midiator.voices/#harmonic_resonance.midiator.voices.make_choir_ooh">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">make_choir_ooh</span><span class="p">(</span><span class="n">mf</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">choir_ooh</span><span class="p">)</span></div>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_choir_ooh</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">choir_ooh</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">channel</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="make_choir_mixed">
 <a class="viewcode-back" href="../../../../modules/harmonic_resonance.midiator.voices/#harmonic_resonance.midiator.voices.make_choir_mixed">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">make_choir_mixed</span><span class="p">(</span><span class="n">mf</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">choir_mixed</span><span class="p">)</span></div>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_choir_mixed</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">choir_mixed</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">channel</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="make_choir_swell">
 <a class="viewcode-back" href="../../../../modules/harmonic_resonance.midiator.voices/#harmonic_resonance.midiator.voices.make_choir_swell">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">make_choir_swell</span><span class="p">(</span><span class="n">mf</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">choir_swell</span><span class="p">)</span></div>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_choir_swell</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">choir_swell</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">channel</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="make_choir_little_swell">
 <a class="viewcode-back" href="../../../../modules/harmonic_resonance.midiator.voices/#harmonic_resonance.midiator.voices.make_choir_little_swell">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">make_choir_little_swell</span><span class="p">(</span><span class="n">mf</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">choir_little_swell</span><span class="p">)</span></div>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_choir_little_swell</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Voice</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">voice_name</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">choir_little_swell</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">channel</span><span class="p">)</span></div>
 
 </pre></div>
 <div class="section">
