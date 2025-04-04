@@ -99,7 +99,7 @@ fade_duration = 2 * M
 pad_warm.ramp_volume_down(fade_duration, lo=0)
 pad_halo.ramp_volume_down(fade_duration, lo=0)
 fx_atmosphere.ramp_volume_down(fade_duration, lo=0)
-vibes.ramp_volume_down(fade_duration, lo=0) # Fade out vibes too
+#  vibes.ramp_volume_down(fade_duration, lo=0) # Fade out vibes too
 
 # 5. Final Output
 part.save()
