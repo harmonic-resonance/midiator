@@ -37,7 +37,7 @@ pad_halo.set_volume(0, 0)
 fx_atmosphere.set_volume(55, 0) # Slightly lower atmosphere
 vibes.set_volume(70, 0) # Moderate volume for vibes melody
 
-# 4. Structure and Arrangement - Long notes, swells, sparse melody
+# 4. Structure and Arrangement - Long notes, swells, dynamic melody
 total_loops = 3
 measures_per_chord = 4 # Hold chords for a long time
 chord_duration = measures_per_chord * M
