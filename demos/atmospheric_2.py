@@ -2,6 +2,7 @@
 Atmospheric Composition 2: Gentle pads with a simple melody.
 """
 import harmonic_resonance.midiator as pm
+from harmonic_resonance.midiator.scales import Scale # Import Scale
 import random
 from rich import print as log
 
@@ -12,10 +13,15 @@ bpm = 65  # Slightly faster than the previous, but still slow
 bpM = 4
 root = pm.N.C4  # C Major for a gentler feel
 key = "C"
+key_scale_type = pm.S.major # Use the major scale type
 
 part = pm.Part(PROJECT, title, bpm=bpm, bpM=bpM, root=root, key=key)
 M = part.measure_ticks()  # Ticks per measure
 b = part.ticks_per_beat # Ticks per beat
+
+# Define key notes for melody generation (e.g., C3 to C6)
+key_notes_scale = Scale(root - 12, key_scale_type, octaves=3) # C3 to C5 range
+key_notes = list(key_notes_scale.notes.values())
 
 # 2. Musical Foundation - Simple Major Chord Progression (I - IV - V - I)
 chords_notes = [
@@ -70,25 +76,59 @@ for loop in range(total_loops):
         pad_halo.ramp_volume_up(chord_duration - M/2, lo=0, hi=50)
         pad_halo.set_notes(pad_halo_chord, chord_duration - M/2, velocity=65)
 
-        # --- Fluid Vibraphone Melody ---
-        # Play chord tones (R, 3, 5, 7) as quarter notes over the measures
-        chord_melody_notes = [n + 12 for n in chord] # Use octave above
-        root_melody = chord_melody_notes[0] # Default to root
+        # --- Dynamic Vibraphone Melody ---
+        # Combine chord notes (original, +12) and key notes for selection pool
+        chord_notes_melody_range = [n for n in chord] + [n + 12 for n in chord]
+        available_notes = sorted(list(set(chord_notes_melody_range + key_notes)))
+        # Filter notes to a reasonable range (e.g., C3 to C7)
+        available_notes = [n for n in available_notes if pm.N.C3 <= n <= pm.N.C7]
+
+        possible_durations = [b / 2, b, b * 1.5, b * 2] # Eighth, quarter, dotted q, half
+        last_note = root + 12 # Start melody near C5
 
         for measure in range(measures_per_chord):
-            for beat_num in range(bpM):
-                note_to_play = root_melody # Default note
-                if beat_num == 0:
-                    note_to_play = chord_melody_notes[0]
-                elif beat_num == 1 and len(chord_melody_notes) > 1:
-                    note_to_play = chord_melody_notes[1]
-                elif beat_num == 2 and len(chord_melody_notes) > 2:
-                    note_to_play = chord_melody_notes[2]
-                elif beat_num == 3 and len(chord_melody_notes) > 3:
-                    note_to_play = chord_melody_notes[3]
-                # Add slight velocity variation
-                velocity = random.randint(60, 75)
-                vibes.set_note(note_to_play, b, velocity=velocity)
+            measure_time_elapsed = 0
+            while measure_time_elapsed < M:
+                # Ensure duration doesn't exceed measure boundary
+                remaining_time = M - measure_time_elapsed
+                valid_durations = [d for d in possible_durations if d <= remaining_time]
+                if not valid_durations: # Should not happen if M is multiple of b/2
+                     duration = remaining_time
+                else:
+                    duration = random.choice(valid_durations)
+
+                # Decide note or rest
+                if random.random() < 0.85: # 85% chance of playing a note
+                    # Select note: 70% chord tone (any octave), 30% key tone
+                    if random.random() < 0.70 and chord_notes_melody_range:
+                        note_pool = [n for n in chord_notes_melody_range if pm.N.C3 <= n <= pm.N.C7]
+                        if not note_pool: # Fallback if chord notes out of range
+                             note_pool = available_notes
+                    else:
+                        note_pool = available_notes
+
+                    # Avoid large leaps sometimes by biasing towards notes near the last one
+                    if last_note and random.random() < 0.6: # 60% chance to bias
+                        notes_with_distance = sorted([(abs(n - last_note), n) for n in note_pool])
+                        # Prefer notes within an octave jump
+                        close_notes = [n for dist, n in notes_with_distance if dist <= 12]
+                        if close_notes:
+                            note_to_play = random.choice(close_notes)
+                        else: # If no notes within an octave, pick the absolute closest
+                            note_to_play = notes_with_distance[0][1]
+                    else: # Pick randomly from the selected pool
+                         note_to_play = random.choice(note_pool)
+
+
+                    velocity = random.randint(55, 80)
+                    vibes.set_note(note_to_play, duration, velocity=velocity)
+                    last_note = note_to_play
+                else:
+                    # Play a rest
+                    vibes.set_rest(duration)
+                    # Don't reset last_note during rests
+
+                measure_time_elapsed += duration
 
         current_time += chord_duration
 
