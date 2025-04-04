@@ -70,18 +70,40 @@ for loop in range(total_loops):
         pad_halo.ramp_volume_up(chord_duration - M/2, lo=0, hi=50)
         pad_halo.set_notes(pad_halo_chord, chord_duration - M/2, velocity=65)
 
-        # --- Gentle Vibraphone Melody ---
-        # Simple pattern: Play 1st and 3rd notes of the chord (higher octave)
-        # Hold each for almost 2 measures with a rest in between
-        melody_note_1 = chord[0] + 12 # First note, octave up
-        melody_note_2 = chord[2] + 12 # Third note, octave up
-        note_duration = M * 2 - b # Hold for almost 2 measures
-        rest_duration = b # Short rest
+        # --- Dynamic Vibraphone Melody ---
+        # Pattern over 4 measures: R - 5 - | 3 - 7 - | Rest | Rest |
+        # Notes played in higher octave
+        try:
+            root_note = chord[0] + 12
+            third_note = chord[1] + 12 # Assuming chord notes are [R, 3, 5, 7]
+            fifth_note = chord[2] + 12
+            # Use root again if chord doesn't have a 7th (e.g., triads)
+            seventh_note = chord[3] + 12 if len(chord) > 3 else root_note
+        except IndexError:
+            log.warning(f"Chord {chord_name} ({chord}) too short for melody pattern, using root.")
+            root_note = chord[0] + 12
+            third_note = root_note
+            fifth_note = root_note
+            seventh_note = root_note
 
-        vibes.set_note(melody_note_1, note_duration, velocity=60)
+
+        note_duration = b # Play for one beat
+        rest_duration = b # Rest for one beat
+
+        # Measure 1
+        vibes.set_note(root_note, note_duration, velocity=65)
         vibes.set_rest(rest_duration)
-        vibes.set_note(melody_note_2, note_duration, velocity=55)
+        vibes.set_note(fifth_note, note_duration, velocity=60)
         vibes.set_rest(rest_duration)
+
+        # Measure 2
+        vibes.set_note(third_note, note_duration, velocity=62)
+        vibes.set_rest(rest_duration)
+        vibes.set_note(seventh_note, note_duration, velocity=58)
+        vibes.set_rest(rest_duration)
+
+        # Measure 3 & 4
+        vibes.set_rest(2 * M)
 
         current_time += chord_duration
 
