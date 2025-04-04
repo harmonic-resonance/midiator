@@ -27,8 +27,8 @@ M = part.measure_ticks()  # Ticks per measure
 
 chords_notes = [
     ("Cm7", pm.get_chord_notes(pm.N.C3, pm.C.minor_7)),
-    ("AbM7", pm.get_chord_notes(pm.N.Ab3, pm.C.major_7)),
-    ("Dm7b5", pm.get_chord_notes(pm.N.D3, pm.C.minor_7)[:-1] + [pm.N.Ab3]), # Manual m7b5
+    ("AbM7", pm.get_chord_notes(pm.N.Gs3, pm.C.major_7)), # Ab3 is enharmonically Gs3
+    ("Dm7b5", pm.get_chord_notes(pm.N.D3, pm.C.minor_7)[:-1] + [pm.N.Gs3]), # Manual m7b5, using Gs3 for Ab3
     ("G7", pm.get_chord_notes(pm.N.G3, pm.C.dominant_7)),
 ]
 
