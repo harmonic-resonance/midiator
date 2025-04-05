@@ -71,14 +71,34 @@ class Instrument():
     def ramp_volume_up(self, duration, lo=32, hi=96):
         duration = int(duration)
         steps = range(lo, hi)
-        for val in steps:
-            self.set_volume(val, duration/len(steps))
+        num_steps = len(steps)
+        if num_steps == 0: return
+
+        base_step_duration = duration // num_steps
+        remainder_ticks = duration % num_steps
+
+        for i, val in enumerate(steps):
+            step_duration = base_step_duration
+            if i < remainder_ticks: # Distribute remainder to first few steps
+                step_duration += 1
+            self.set_volume(val, step_duration)
 
     def ramp_volume_down(self, duration, lo=32, hi=96):
         duration = int(duration)
         steps = range(lo, hi)
-        for val in reversed(steps):
-            self.set_volume(val, duration/len(steps))
+        num_steps = len(steps)
+        if num_steps == 0: return
+
+        base_step_duration = duration // num_steps
+        remainder_ticks = duration % num_steps
+
+        # Iterate through reversed steps but distribute remainder based on loop index
+        reversed_steps = list(reversed(steps))
+        for i, val in enumerate(reversed_steps):
+            step_duration = base_step_duration
+            if i < remainder_ticks: # Distribute remainder to first steps of the ramp execution
+                 step_duration += 1
+            self.set_volume(val, step_duration)
 
     def set_volume(self, level, duration):
         duration = int(duration)
