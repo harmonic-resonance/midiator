@@ -9,7 +9,7 @@ from rich import print as log
 # 1. Project Setup
 PROJECT = "demos"
 title = "atmospheric_2"
-bpm = 65  # Slightly faster than the previous, but still slow
+bpm = 120  # Slightly faster than the previous, but still slow
 bpM = 4
 root = pm.N.C4  # C Major for a gentler feel
 key = "C"
@@ -58,9 +58,10 @@ fx_atmosphere.set_note(root + 12, total_duration, velocity=50) # High C drone
 # --- Pad Layers & Melody ---
 current_time = 0
 for loop in range(total_loops):
-    part.set_marker(f"Loop {loop+1}", current_time)
+    part.set_marker(f"Loop {loop+1}", 0)
     for chord_idx, (chord_name, chord) in enumerate(chords_notes):
-        part.set_marker(f"{chord_name}", current_time)
+        part.set_marker(f"{chord_name}", chord_duration)
+        #  part.set_marker(f"{chord_name}", 0)
 
         # Pad Warm - Low register, slow swell in and out
         pad_warm_chord = [n - 12 for n in chord] # Octave down
@@ -72,8 +73,8 @@ for loop in range(total_loops):
         # Pad Halo - Higher register, different swell
         pad_halo_chord = chord # Use original octave
         pad_halo.set_rest(M / 2) # Enter slightly later
-        pad_halo.set_volume(0, 0)
-        pad_halo.ramp_volume_up(chord_duration - M/2, lo=0, hi=50)
+        #  pad_halo.set_volume(0, 0)
+        #  pad_halo.ramp_volume_up(chord_duration - M/2, lo=0, hi=50)
         pad_halo.set_notes(pad_halo_chord, chord_duration - M/2, velocity=65)
 
         # --- Dynamic Vibraphone Melody ---
